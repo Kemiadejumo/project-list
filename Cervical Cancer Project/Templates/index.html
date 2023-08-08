@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+  
+</head>
+
+<body>
+ <div class="login">
+	<h1>Predict Risk Of Cervical Cancer</h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+     
+         <form action="/predict" method = 'POST'>
+
+    <input type="text" name="Age" placeholder="Age" required="required" />
+        <input type="text" name="Number of sexual partners" placeholder="Number of sexual partners" required="required" />
+        <input type="text" name="First sexual intercourse (age)" placeholder="First sexual intercourse (age)" required="required" />
+<input type="text" name="Number of pregnancies" placeholder="Number of pregnancies" required="required" />
+<input type="text" name="Smokes" placeholder="Smokes" required="required" />
+<input type="text" name="Smokes(years)" placeholder="Smokes(years)" required="required" />
+             
+<input type="text" name="Smokes(packs/year)" placeholder="Smokes(packs/year)" required="required" />
+<input type="text" name="Hormonal Contraceptives" placeholder="Hormonal Contraceptives" required="required" />
+<input type="text" name="Hormonal Contraceptives (years)" placeholder="Hormonal Contraceptives (years)" required="required" />
+<input type="text" name="IUD" placeholder="IUD" required="required" />
+<input type="text" name="IUD (years)" placeholder="IUD (years)" required="required" />
+<input type="text" name="STDs" placeholder="STDs" required="required" />
+<input type="text" name="STDs(number)" placeholder="STDs(number)" required="required" />
+<input type="text" name="STDs:condylomatosis" placeholder="STDs:condylomatosis" required="required" />
+             
+<input type="text" name="STDs:cervical condylomatosis" placeholder="STDs:cervical condylomatosis" required="required" />
+<input type="text" name="STDs:vaginal condylomatosis" placeholder="STDs:vaginal condylomatosis" required="required" />
+<input type="text" name="STDs:vulvo-perineal condylomatosis" placeholder="STDs:vulvo-perineal condylomatosis" required="required" />
+<input type="text" name="STDs:syphilis" placeholder="STDs:syphilis" required="required" />
+<input type="text" name="STDs:pelvic inflammatory disease" placeholder="STDs:pelvic inflammatory disease" required="required" />
+<input type="text" name="STDs:genital herpes" placeholder="STDs:genital herpes" required="required" />
+<input type="text" name="STDs: Molluscum contagiosum" placeholder="STDs: Molluscum contagiosum" required="required" />
+<input type="text" name="STDs:AIDS" placeholder="STDs: AIDS" required="required" />
+<input type="text" name="STDs:HIV" placeholder="STDs:HIV" required="required" />
+<input type="text" name="STDs:Hepatitis B" placeholder="STDs:Hepatitis B" required="required" />
+<input type="text" name="STDs:HPV" placeholder="STDs:HPV" required="required" />
+<input type="text" name="STDs:Number of diagnosis" placeholder="STDs:Number of diagnosis" required="required" />
+<input type="text" name="DX:Cancer" placeholder="DX: Cancer" required="required" />
+<input type="text" name="Dx:CIN" placeholder="DX:CIN" required="required" />
+<input type="text" name="Dx:HPV" placeholder="Dx:HPV" required="required" />
+<input type="text" name="Hinselmann" placeholder="Hinselmann" required="required" />
+<input type="text" name="Schiller" placeholder="Schiller" required="required" />
+<input type="text" name="Cytology" placeholder="Cytology" required="required" />
+<input type="text" name="Biopsy" placeholder="Biopsy" required="required" /> 
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+   <br>
+   <br>
+   {{ prediction_text }}
+
+ </div>
+
+
+</body>

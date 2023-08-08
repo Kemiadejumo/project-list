@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Final_project</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  
+</head>
+
+<body>
+ <div class="login">
+	<h1>Predict Cervical Cancer</h1>
+	<h1>Yes = 1, No = 0</h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+     <form action="{{ url_for('/predict')}}"method="post">
+ 
+    	<input type="text" name="Age" placeholder="Age" required="required" />
+        <input type="text" name="Number of sexual partners" placeholder="Number of sexual partners" required="required" />
+<input type="text" name="Number of pregnancies" placeholder="Number of pregnancies" required="required" />
+        <input type="text" name="First sexual intercourse (age)" placeholder="First sexual intercourse (age)" required="required" />
+<input type="text" name="DX:Cancer" placeholder="DX: Cancer" required="required" />
+<input type="text" name="Dx:CIN" placeholder="DX:CIN" required="required" />
+<input type="text" name="Dx:HPV" placeholder="Dx:HPV" required="required" />
+
+<input type="text" name="Biopsy" placeholder="Biopsy" required="required" /> 
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+   <br>
+   <br>
+   {{ prediction_text }}
+
+ </div>
+
+
+</body>
+</html>
